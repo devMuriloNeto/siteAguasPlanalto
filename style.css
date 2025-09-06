@@ -55,10 +55,16 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to right, #0077be, #00a8ff);
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 119, 190, 0.3)),
+        url('images/mainScreen.png'); /* substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     padding: 120px 0 80px;
     text-align: center;
+    height: 100dvh;
 }
 
 .hero-content h1 {
@@ -75,15 +81,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-.btn {
-    background: white;
-    color: #0077be;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
 }
 
 .btn-outline {
