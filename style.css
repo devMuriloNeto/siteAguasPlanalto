@@ -57,7 +57,7 @@ body {
 .hero {
     background-image: 
         linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 119, 190, 0.3)),
-        url('images/mainScreen.png'); /* substitua pelo caminho da sua imagem */
+        url('images/papel_de_parede.png'); /* substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,6 +65,14 @@ body {
     padding: 120px 0 80px;
     text-align: center;
     height: 100dvh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
 }
 
 .hero-content h1 {
