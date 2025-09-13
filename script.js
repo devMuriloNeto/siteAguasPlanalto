@@ -1,109 +1,79 @@
-// Função para rolar suavemente para as seções
-function scrollToSection(sectionId) {
-    const section = document.querySelector(sectionId);
-    if (section) {
-        section.scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-}
+// Menu mobile
+const menuBtn = document.querySelector('.menu-btn');
+const mobilePanel = document.getElementById('mobile-nav');
 
-// Adicionar evento de clique para todos os links de navegação
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        scrollToSection(targetId);
+menuBtn?.addEventListener('click', () => {
+  const open = mobilePanel.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', String(open));
+});
+
+mobilePanel?.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => {
+    mobilePanel.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  })
+);
+
+// IntersectionObserver para revelar seções
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
     });
-});
+  },
+  { threshold: 0.12 }
+);
+revealEls.forEach(el => io.observe(el));
 
-// Validação do formulário de contato
-document.getElementById('form-contato').addEventListener('submit', function(e) {
+// Botão Voltar ao topo
+const toTop = document.getElementById('toTop');
+const toggleTop = () => {
+  const show = window.scrollY > 600;
+  toTop.style.opacity = show ? 1 : 0;
+  toTop.style.pointerEvents = show ? 'auto' : 'none';
+  toTop.style.transform = show ? 'none' : 'translateY(6px)';
+};
+
+window.addEventListener('scroll', toggleTop, { passive: true });
+
+toTop?.addEventListener('click', () =>
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+);
+
+// Validação do formulário com regras simples
+const form = document.getElementById('form-contato');
+
+if (form) {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    // Pegar os valores dos campos
-    const nome = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const telefone = this.querySelector('input[type="tel"]').value;
-    const mensagem = this.querySelector('textarea').value;
-    
-    // Validação simples
-    if (!nome || !email || !mensagem) {
-        alert('Por favor, preencha todos os campos obrigatórios (nome, email e mensagem)');
-        return;
+
+    const nome = document.getElementById('nome');
+    const email = document.getElementById('email');
+    const mensagem = document.getElementById('mensagem');
+
+    if (!nome.value.trim()) {
+      nome.focus();
+      alert('Por favor, informe seu nome.');
+      return;
     }
-    
-    if (!email.includes('@') || !email.includes('.')) {
-        alert('Por favor, digite um email válido');
-        return;
+
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      email.focus();
+      alert('Por favor, informe um e-mail válido.');
+      return;
     }
-    
-    // Simular envio do formulário
+
+    if (!mensagem.value.trim()) {
+      mensagem.focus();
+      alert('Por favor, escreva sua mensagem.');
+      return;
+    }
+
+    // Simulação de envio
     alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-    
-    // Limpar o formulário
-    this.reset();
-});
-
-// Menu responsivo simples
-function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
+    form.reset();
+  });
 }
-
-// Adicionar botão de menu mobile para telas pequenas
-function setupMobileMenu() {
-    if (window.innerWidth <= 768) {
-        const navContainer = document.querySelector('.nav-container');
-        const menuButton = document.createElement('button');
-        menuButton.innerHTML = '☰';
-        menuButton.className = 'menu-button';
-        menuButton.onclick = toggleMenu;
-        
-        // Inserir o botão antes dos links de navegação
-        navContainer.insertBefore(menuButton, navContainer.querySelector('.nav-links'));
-        
-        // Adicionar estilo para o menu mobile
-        const style = document.createElement('style');
-        style.textContent = `
-            .menu-button {
-                background: none;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                color: #0077be;
-            }
-            
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: white;
-                padding: 20px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            }
-            
-            .nav-links.show {
-                display: flex;
-            }
-            
-            .nav-links a {
-                margin: 10px 0;
-                padding: 10px;
-                border-bottom: 1px solid #eee;
-            }
-        `;
-        document.head.appendChild(style);
-    }
-}
-
-// Executar quando a página carregar
-window.addEventListener('load', function() {
-    setupMobileMenu();
-});
-
-// Atualizar quando a janela for redimensionada
-window.addEventListener('resize', setupMobileMenu);
