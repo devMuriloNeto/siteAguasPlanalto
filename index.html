@@ -1,150 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Águas Planalto</title>
-    <link rel="icon" href="images/icone_site.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Águas Planalto • Pureza em cada gota</title>
+  <meta name="description" content="Águas premium com qualidade excepcional para seu bem-estar." />
+  <link rel="icon" href="images/icone_site.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Menu de Navegação -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="https://placehold.co/150x50/0077be/white?text=Águas%20Planalto" alt="Logo ÁguasPlanalto">
-            </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#produtos">Produtos</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#contato">Contato</a>
-            </div>
-        </div>
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar" aria-label="Barra de navegação">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Voltar ao topo">
+        <img src="https://placehold.co/120x40/0b3b69/ffffff?text=Águas" alt="Logo Águas Planalto" loading="eager" />
+        <h1>Águas Planalto</h1>
+      </a>
 
-    <!-- Seção Principal -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Pureza em Cada Gota</h1>
-            <p>Águas premium com qualidade excepcional para seu bem-estar</p>
-            <div class="hero-buttons">
-                <a href="#produtos" class="btn-outline">Ver Produtos</a>
-                <a href="#contato" class="btn-outline">Fale Conosco</a>
-            </div>
-        </div>
-    </section>
+      <div class="nav-links" aria-label="Links principais">
+        <a href="#home">Home</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a class="cta" href="#contato" aria-label="Solicitar contato">Peça um orçamento</a>
+      </div>
 
-    <!-- Seção de Produtos -->
-    <section id="produtos" class="products">
-        <div class="container">
-            <h2>Nossos Produtos</h2>
-            <p>Conheça nossa linha completa de águas</p>
-            
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://placehold.co/300x400/0077be/white?text=Água+Natural" alt="Água sem gás natural">
-                    <h3>Água Sem Gás</h3>
-                    <p>Pureza natural para hidratação diária</p>
-                </div>
-                
-                <div class="product-card">
-                    <img src="https://placehold.co/300x400/0077be/white?text=Água+Com+Gás" alt="Água com gás">
-                    <h3>Água Com Gás</h3>
-                    <p>Refrescante e efervescente</p>
-                </div>
-                
-                <div class="product-card">
-                    <img src="https://placehold.co/300x400/0077be/white?text=Água+Saborizada" alt="Água saborizada">
-                    <h3>Água Saborizada</h3>
-                    <p>Sabores naturais sem açúcar</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="#0b3b69" stroke-width="2" stroke-linecap="round"/></svg>
+        Menu
+      </button>
+    </div>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <h2>Sobre a Águas Planalto</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Há mais de 20 anos fornecendo águas da mais alta qualidade. Nossa água vem de fontes naturais protegidas.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <h4>Qualidade Garantida</h4>
-                            <p>Certificada pelos melhores padrões</p>
-                        </div>
-                        <div class="feature">
-                            <h4>Sustentabilidade</h4>
-                            <p>Processos ecológicos e embalagens recicláveis</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="images/loja.png" alt="Nossa fábrica">
-                </div>
-            </div>
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="hero-wrap container">
+      <div>
+        <span class="badge">Pureza natural • Qualidade certificada</span>
+        <h2>Pureza em cada gota</h2>
+        <p>Águas premium com qualidade excepcional para seu bem-estar. Da fonte protegida até sua casa, com sustentabilidade e confiança.</p>
+        <div class="hero-actions">
+          <a href="#produtos" class="btn btn-primary">Ver produtos</a>
+          <a href="#contato" class="btn btn-ghost">Fale conosco</a>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="wave" aria-hidden="true"></div>
+  </header>
 
-    <!-- Seção Contato -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Informações</h3>
-                    <p><strong>Endereço:</strong> Av. das Águas, 123 - São Paulo</p>
-                    <p><strong>Telefone:</strong> (11) 3456-7890</p>
-                    <p><strong>Email:</strong> contato@aguasplanalto.com.br</p>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>Envie uma Mensagem</h3>
-                    <form id="form-contato">
-                        <input type="text" placeholder="Seu nome" required>
-                        <input type="email" placeholder="Seu email" required>
-                        <input type="tel" placeholder="Seu telefone">
-                        <textarea placeholder="Sua mensagem" required></textarea>
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
+  <!-- MARCAS (faixa rolando) -->
+  <section class="brands" aria-label="Marcas parceiras">
+    <div class="ticker container" role="region" aria-label="Marcas rolando automaticamente">
+      <div class="track">
+        <!-- Conjunto 1 -->
+        <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Crystal" alt="Crystal"></div>
+        <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Ibirá" alt="Ibirá"></div>
+        <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Genuína" alt="Genuína"></div>
+        <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Lindoya+Verão" alt="Lindoya Verão"></div>
+        <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Puríssima" alt="Puríssima"></div>
+        <!-- Conjunto 2 (duplicado para loop contínuo) -->
+        <div class="item" aria-hidden="true"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Crystal" alt=""></div>
+        <div class="item" aria-hidden="true"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Ibirá" alt=""></div>
+        <div class="item" aria-hidden="true"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Genuína" alt=""></div>
+        <div class="item" aria-hidden="true"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Lindoya+Verão" alt=""></div>
+        <div class="item" aria-hidden="true"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Puríssima" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section id="produtos" class="section products reveal">
+    <div class="container">
+      <h3>Nossos Produtos</h3>
+      <p class="lead">Conheça nossa linha completa — hidratação diária com pureza e sabor.</p>
+      <div class="grid" style="margin-top:22px">
+        <!-- Card 1 -->
+        <article class="card" aria-label="Água sem gás">
+          <img class="img" src="https://placehold.co/600x800/0a84ff/ffffff?text=Sem+Gás" alt="Garrafa de água sem gás" loading="lazy" />
+          <div class="body">
+            <h4>Água Sem Gás</h4>
+            <p>Pureza natural para o dia a dia, direto da fonte.</p>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card" aria-label="Água com gás">
+          <img class="img" src="https://placehold.co/600x800/0b3b69/ffffff?text=Com+Gás" alt="Garrafa de água com gás" loading="lazy" />
+          <div class="body">
+            <h4>Água Com Gás</h4>
+            <p>Refrescância efervescente para qualquer momento.</p>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card" aria-label="Água saborizada">
+          <img class="img" src="https://placehold.co/600x800/66b3ff/0b3b69?text=Saborizada" alt="Garrafa de água saborizada" loading="lazy" />
+          <div class="body">
+            <h4>Água Saborizada</h4>
+            <p>Sabores naturais, sem açúcar e sem conservantes.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section about reveal">
+    <div class="container">
+      <h3>Sobre a Águas Planalto</h3>
+      <div class="grid" style="margin-top:12px">
+        <div class="copy">
+          <p class="lead">Há mais de 20 anos fornecendo água de alta qualidade. Nossa captação é feita em fontes naturais protegidas, com rigorosos controles em todas as etapas.</p>
+          <div class="features">
+            <div class="feat">
+              <h5>Qualidade Garantida</h5>
+              <p>Certificações e análises laboratoriais regulares.</p>
             </div>
+            <div class="feat">
+              <h5>Sustentabilidade</h5>
+              <p>Processos eficientes e embalagens 100% recicláveis.</p>
+            </div>
+            <div class="feat">
+              <h5>Rastreabilidade</h5>
+              <p>Do lote à prateleira, transparência total.</p>
+            </div>
+            <div class="feat">
+              <h5>Atendimento</h5>
+              <p>Suporte humano e ágil para clientes e parceiros.</p>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Produtos</h4>
-                    <a href="#produtos">Água Sem Gás</a>
-                    <a href="#produtos">Água Com Gás</a>
-                    <a href="#produtos">Água Saborizada</a>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Empresa</h4>
-                    <a href="#sobre">Sobre Nós</a>
-                    <a href="#sobre">Nossa História</a>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <a href="#contato">Fale Conosco</a>
-                    <a href="#contato">Trabalhe Conosco</a>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Águas Planalto - Todos os direitos reservados</p>
-            </div>
+        <div class="media">
+          <img src="images/loja.png" alt="Fábrica da Águas Planalto" loading="lazy" />
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- CONTATO -->
+  <section id="contato" class="section contact reveal">
+    <div class="container">
+      <h3>Entre em Contato</h3>
+      <div class="grid" style="margin-top:12px">
+        <div class="panel" aria-label="Informações de contato">
+          <h4>Informações</h4>
+          <p class="muted"><strong>Endereço:</strong> Av. das Águas, 123 — São Paulo/SP</p>
+          <p class="muted"><strong>Telefone:</strong> (11) 3456-7890</p>
+          <p class="muted"><strong>Email:</strong> contato@aguasplanalto.com.br</p>
+          <div class="social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram" title="Instagram" rel="nofollow noopener">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="#0b3b69"/><circle cx="12" cy="12" r="4" stroke="#0b3b69"/><circle cx="17.5" cy="6.5" r="1" fill="#0b3b69"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" title="Facebook" rel="nofollow noopener">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M13 10h3l-1 4h-2v8h-4v-8H7v-4h2V8a4 4 0 0 1 4-4h3v4h-3a1 1 0 0 0-1 1v1Z" fill="#0b3b69"/></svg>
+            </a>
+            <a href="#" aria-label="WhatsApp" title="WhatsApp" rel="nofollow noopener">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2a9 9 0 0 0-7.8 13.5L3 22l6.7-1.8A9 9 0 1 0 12 2Z" stroke="#0b3b69"/><path d="M8.5 9c.2-.5.4-.6.8-.6.2 0 .5 0 .7.1.2.1.3.4.4.6.1.4.3.8.5 1.1.1.2 0 .5-.1.7-.1.1-.2.3-.3.4 0 0 0 .1.1.2.5.8 1.2 1.4 2 1.8.1 0 .2 0 .3-.1l.4-.4c.2-.1.4-.2.6-.1.5.1 1 .3 1.5.5.2.1.4.2.4.5 0 .4-.2.8-.4 1-.3.3-.7.5-1.2.5-1 0-2-.3-2.9-.8-1.6-.9-2.8-2.4-3.4-4.1-.2-.6-.3-1.1-.3-1.7 0-.4.1-.7.3-1Z" fill="#0b3b69"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="panel" aria-label="Formulário de contato">
+          <h4>Envie uma mensagem</h4>
+          <form id="form-contato" novalidate>
+            <div class="row">
+              <div>
+                <label for="nome">Seu nome</label>
+                <input id="nome" name="nome" type="text" placeholder="Maria Silva" required autocomplete="name" />
+              </div>
+              <div>
+                <label for="email">Seu e-mail</label>
+                <input id="email" name="email" type="email" placeholder="voce@exemplo.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="telefone">Telefone</label>
+                <input id="telefone" name="telefone" type="tel" placeholder="(11) 90000-0000" autocomplete="tel" />
+                <div class="hint">Opcional — WhatsApp ou telefone para contato</div>
+              </div>
+              <div>
+                <label for="assunto">Assunto</label>
+                <input id="assunto" name="assunto" type="text" placeholder="Orçamento, dúvidas, parceria..." />
+              </div>
+            </div>
+            <div class="row" style="grid-template-columns:1fr">
+              <div>
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+              </div>
+            </div>
+            <div class="submit">
+              <button type="submit" class="btn btn-primary" aria-label="Enviar mensagem">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footgrid">
+      <div class="fbrand">
+        <img src="https://placehold.co/160x52/ffffff/0b3b69?text=Águas" alt="Águas Planalto" style="height:52px;width:auto" />
+        <p class="muted" style="margin-top:10px;max-width:48ch">Água de fonte protegida, embalada com processos sustentáveis e controle de qualidade de ponta.</p>
+        <div class="social" aria-label="Redes sociais no rodapé">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#ffffff" opacity=".3"/><circle cx="12" cy="12" r="4" stroke="#ffffff" opacity=".95"/><circle cx="17.5" cy="6.5" r="1" fill="#ffffff" opacity=".95"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#ffffff" opacity=".3"/><path d="M7 17V10m0-3v.01M11 17v-5m0 0c0-1.105.895-2 2-2s2 .895 2 2v5" stroke="#ffffff" opacity=".95" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="flinks">
+        <h6>Produtos</h6>
+        <a href="#produtos">Água Sem Gás</a>
+        <a href="#produtos">Água Com Gás</a>
+        <a href="#produtos">Água Saborizada</a>
+      </div>
+      <div class="flinks">
+        <h6>Empresa</h6>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#sobre">Nossa história</a>
+      </div>
+      <div class="flinks">
+        <h6>Contato</h6>
+        <a href="#contato">Fale conosco</a>
+        <a href="#contato">Trabalhe conosco</a>
+      </div>
+      <div class="copyr">© 2025 Águas Planalto — Todos os direitos reservados</div>
+    </div>
+  </footer>
+
+  <!-- Voltar ao topo -->
+  <button id="toTop" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
 </body>
 </html>
