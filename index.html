@@ -34,6 +34,14 @@
         Menu
       </button>
     </div>
+    <div id="mobile-nav" class="mobile-panel" role="dialog" aria-modal="false">
+      <a href="#home">Home</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+      <a class="cta" href="#contato">Peça um orçamento</a>
+    </div>
+    <div id="mobile-backdrop" class="mobile-backdrop" aria-hidden="true"></div>
+  </nav>
 
   <!-- HERO -->
   <header id="home" class="hero">
@@ -55,13 +63,11 @@
   <section class="brands" aria-label="Marcas parceiras">
     <div class="ticker container" role="region" aria-label="Marcas rolando automaticamente">
       <div class="track">
-        <!-- Conjunto 1 -->
         <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Crystal" alt="Crystal"></div>
         <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Ibirá" alt="Ibirá"></div>
         <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Genuína" alt="Genuína"></div>
         <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Lindoya+Verão" alt="Lindoya Verão"></div>
         <div class="item"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Puríssima" alt="Puríssima"></div>
-        <!-- Conjunto 2 (duplicado para loop contínuo) -->
         <div class="item" aria-hidden="true"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Crystal" alt=""></div>
         <div class="item" aria-hidden="true"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Ibirá" alt=""></div>
         <div class="item" aria-hidden="true"><img src="https://placehold.co/180x70/ffffff/0b3b69?text=Genuína" alt=""></div>
@@ -77,30 +83,27 @@
       <h3>Nossos Produtos</h3>
       <p class="lead">Conheça nossa linha completa — hidratação diária com pureza e sabor.</p>
       <div class="grid" style="margin-top:22px">
-        <!-- Card 1 -->
-        <article class="card" aria-label="Água sem gás">
+        <a class="card" href="produtos/agua-sem-gas.html" aria-label="Ver detalhes de Água Sem Gás">
           <img class="img" src="https://placehold.co/600x800/0a84ff/ffffff?text=Sem+Gás" alt="Garrafa de água sem gás" loading="lazy" />
           <div class="body">
             <h4>Água Sem Gás</h4>
             <p>Pureza natural para o dia a dia, direto da fonte.</p>
           </div>
-        </article>
-        <!-- Card 2 -->
-        <article class="card" aria-label="Água com gás">
+        </a>
+        <a class="card" href="produtos/agua-com-gas.html" aria-label="Ver detalhes de Água Com Gás">
           <img class="img" src="https://placehold.co/600x800/0b3b69/ffffff?text=Com+Gás" alt="Garrafa de água com gás" loading="lazy" />
           <div class="body">
             <h4>Água Com Gás</h4>
             <p>Refrescância efervescente para qualquer momento.</p>
           </div>
-        </article>
-        <!-- Card 3 -->
-        <article class="card" aria-label="Água saborizada">
+        </a>
+        <a class="card" href="produtos/agua-saborizada.html" aria-label="Ver detalhes de Água Saborizada">
           <img class="img" src="https://placehold.co/600x800/66b3ff/0b3b69?text=Saborizada" alt="Garrafa de água saborizada" loading="lazy" />
           <div class="body">
             <h4>Água Saborizada</h4>
             <p>Sabores naturais, sem açúcar e sem conservantes.</p>
           </div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
